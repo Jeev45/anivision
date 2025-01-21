@@ -2248,6 +2248,7 @@ section.features-carousel-section .owl-carousel .owl-nav button.owl-next {
 .features-section .features-box h3 {
   font-size: 26px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .features-section .features-box p {
