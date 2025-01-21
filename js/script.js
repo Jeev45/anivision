@@ -301,32 +301,33 @@ $(document).ready(function($) {
 	/* ---------------------------------------------------------------------- */
 	/*	Contact Form
 	/* ---------------------------------------------------------------------- */
-
-	var submitContact = $('#submit_contact'),
-		message = $('#msg');
-
-	submitContact.on('click', function(e){
-		e.preventDefault();
-
-		var $this = $(this);
-		
-		$.ajax({
-			type: "POST",
-			url: 'contact.php',
-			dataType: 'json',
-			cache: false,
-			data: $('#contact-form').serialize(),
-			success: function(data) {
-
-				if(data.info !== 'error'){
-					$this.parents('form').find('input[type=text],textarea').filter(':visible').val('');
-					message.hide().removeClass('alert-success').removeClass('alert-danger').addClass('alert-success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-				} else {
-					message.hide().removeClass('alert-success').removeClass('alert-danger').addClass('alert-danger').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
-				}
-			}
-		});
-	});
+	document.addEventListener('DOMContentLoaded', function () {
+		const contactForm = document.querySelector('#contact-form');
+	  
+		if (contactForm) {
+		  const scriptURL = 'https://script.google.com/macros/s/AKfycbyDv7zVk8UNt1dCgTax8-CW6j5pk7rtPp9a109DyTelkZGf-6oaj7HL3LQM3xzq3bRCQQ/exec';
+	  
+		  contactForm.addEventListener('submit', e => {
+			e.preventDefault();
+	  
+			console.log('Submitting form...'); // Log before sending
+	  
+			fetch(scriptURL, { method: 'POST', body: new FormData(contactForm) })
+			  .then(response => {
+				console.log('Form submitted successfully:', response); // Log the response
+				alert("Thank you! Your form has been submitted successfully.");
+				contactForm.reset();
+			  })
+			  .catch(error => {
+				console.error('Error!', error.message); // Log errors
+			  });
+		  });
+		}
+	  });
+	  
+	  
+	
+	
 	
 	/* ---------------------------------------------------------------------- */
 	/*	works carousel

@@ -324,7 +324,7 @@ header .nav-menu-box {
 @media (max-width: 1023px) {
   header .nav-menu-box {
     left: -100vw;
-    width: 50vw;
+    width: 100vw;
   }
 }
 @media (max-width: 767px) {
@@ -1483,6 +1483,7 @@ section.portfolio-section .portfolio-box.joined .portfolio-post {
   z-index: 1; /* Keeps the text above the background */
   color: #fff; /* White text for contrast */
   padding: 1rem; /* Padding inside the box */
+  font-size: 1rem; /* Default font size */
 }
 
 .hover-box-content::before {
@@ -1490,7 +1491,7 @@ section.portfolio-section .portfolio-box.joined .portfolio-post {
   position: absolute;
   top: 0;
   left: 0;
-  right: 250px;
+  right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
   border-radius: 1rem; /* Rounded corners */
@@ -1502,6 +1503,19 @@ section.portfolio-section .portfolio-box.joined .portfolio-post {
 /* Trigger hover effect when the mouse is on the image or text */
 figure:hover .hover-box-content::before {
   opacity: 1; /* Makes the box visible */
+}
+
+/* Responsive adjustments for mobile view */
+@media (max-width: 768px) {
+  .hover-box-content {
+    text-align: left; /* Reduce padding for smaller screens */
+    font-size: 5px; /* Smaller font size for mobile */
+    line-height: 0.5; /* Adjust line height for better readability */
+  }
+
+  .hover-box-content::before {
+    border-radius: 0.5rem; /* Smaller rounded corners for compact design */
+  }
 }
 
 
@@ -1664,6 +1678,22 @@ section.contact-info-section .col-lg-4 .contact-info-post p {
 }
 .contact-form-box #contact-form input[type=text],
 .contact-form-box #contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 0 12px 20px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  border: none;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.contact-form-box #contact-form input[type=email]{
   display: block;
   width: 100%;
   padding: 0 12px 20px;

@@ -377,7 +377,21 @@
 		function redirectToPage8() {
 			window.location.href = "#";
 		}
-		
+		function removeOnClickForMobile() {
+  			const portfolioPosts = document.querySelectorAll('.portfolio-post');
+  			if (window.innerWidth <= 768) { // Mobile screen threshold
+    		portfolioPosts.forEach((post) => {
+     		 post.onclick = null; // Remove onclick event
+    			});
+  			}
+		}
+
+// Run the function on page load
+removeOnClickForMobile();
+
+// Run the function on window resize to dynamically apply changes
+window.addEventListener('resize', removeOnClickForMobile);
+
 </script>
 	<!--build:js js/royarch-plugins.min.js -->
 	<script src="js/jquery.min.js"></script>

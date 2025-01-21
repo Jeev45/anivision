@@ -72,19 +72,27 @@
 				<div class="social-line">
 					<ul class="social-list">
 						<li>
-							<a href="https://www.facebook.com/people/Anivision-Studio/61567144591197/"><i class="fab fa-facebook-square"></i></a>
+							<a href="https://www.facebook.com/people/Anivision-Studio/61567144591197/" target="_blank" class="facebook">
+								<i class="fab fa-facebook-square"></i>
+							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com/anivisionstudio_/"><i class="fab fa-instagram"></i></a>
+							<a href="https://www.instagram.com/anivisionstudio_/" target="_blank" class="instagram">
+								<i class="fab fa-instagram"></i>
+							</a>
 						</li>
 						<li>
-							<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+							<a href="#" target="_blank" class="twitter">
+								<i class="fa-brands fa-x-twitter"></i>
+							</a>
 						</li>
 						<li>
-							<a href="https://www.linkedin.com/company/anivision-studio/"><i class="fab fa-linkedin"></i></a>
+							<a href="https://www.linkedin.com/company/anivision-studio/" target="_blank" class="linkedin">
+								<i class="fab fa-linkedin"></i>
+							</a>
 						</li>
 					</ul>
-				</div>
+				</div>		
 				<div class="copyright-line">
 					<p>© Anivision Studio 2025</p>
 				</div>
@@ -183,36 +191,40 @@
 					</div>
 					<div class="contact-form-box">
 						<div class="row g-0">
-							<div class="col-lg-8">
-								<form id="contact-form">
-									<h4>Send message</h4>
-									<div class="row">
-										<div class="col-md-6">
-											<div class="input-line">
-												<label for="name"><i class="fas fa-user"></i></label>
-												<input name="name" id="name" type="text" placeholder="Name">
-											</div>
-											<div class="input-line">
-												<label for="mail"><i class="fas fa-envelope"></i></label>
-												<input name="mail" id="mail" type="text" placeholder="E-mail">
-											</div>
-											<div class="input-line">
-												<label for="website"><i class="fas fa-link"></i></label>
-												<input name="website" id="website" type="text" placeholder="Website">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="input-line">
-												<textarea name="comment" id="comment" placeholder="Message"></textarea>
-											</div>
-											<button type="submit" id="submit_contact">
-												Send message
-											</button>
-										</div>
-									</div>	
-									<div id="msg"></div>
-								</form>
-							</div>
+						  <div class="col-lg-8">
+							<form id="contact-form" name="contact-form">
+							  <h4>Send message</h4>
+							  <div class="row">
+								<div class="col-md-6">
+								  <div class="input-line">
+									<label for="name"><i class="fas fa-user"></i></label>
+									<input name="Name" id="name" type="text" placeholder="Name">
+								  </div>
+								  <div class="input-line">
+									<label for="mail"><i class="fas fa-envelope"></i></label>
+									<input name="Email" id="mail" type="email" placeholder="E-mail">
+								  </div>
+								  <div class="input-line">
+									<label for="mobile"><i class="fas fa-phone"></i></label>
+									<input name="Mobile" id="mobile" type="text" placeholder="Mobile Number">
+								  </div>
+								</div>
+								<div class="col-md-6">
+								  <div class="input-line">
+									<textarea
+									  name="Message"
+									  id="comment"
+									  placeholder="Message"
+									></textarea>
+								  </div>
+								  <button type="submit" id="submit_contact">
+									Send message
+								  </button>
+								</div>
+							  </div>
+							  <div id="msg"></div>
+							</form>
+						  </div>
 							<div class="col-lg-4">
 								<div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=380&amp;height=310&amp;hl=en&amp;q=animage Digiskill&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://sprunkiplay.com/">Sprunki Game</a></div><style>.mapouter{position:relative;text-align:right;width:380px;height:310px;}.gmap_canvas {overflow:hidden;background:none!important;width:380px;height:310px;}.gmap_iframe {width:380px!important;height:310px!important;}</style></div>
 							</div>
@@ -284,6 +296,7 @@
 </div>
 
 	<!--build:js js/royarch-plugins.min.js -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.migrate.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
