@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anivision Studio</title>
+    <link href="../images/fav_32.png" rel="icon">
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+      }
+
+      .logo img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <a href="/index.html" class="logo">
+        <img src="../images/logo.png" alt="Logo" />
+      </a>
+
+      <div class="image-container"></div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"
+      integrity="sha512-uWKImujbh9CwNa8Eey5s8vlHDB4o1HhrVszkympkm5ciYTnUEQv3t4QHU02CUqPtdKTg62FsHo12x63q6u0wmg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../js/panolens.min.js"></script>
+
+    <script src="../main.js"></script>
+  </body>
+</html>
