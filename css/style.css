@@ -1490,10 +1490,10 @@ section.portfolio-section .portfolio-box.joined .portfolio-post {
 .hover-box-content {
   display: inline-block;
   position: relative;
-  z-index: 1; /* Keeps the text above the background */
-  color: #fff; /* White text for contrast */
-  padding: 1rem; /* Padding inside the box */
-  font-size: 1rem; /* Default font size */
+  z-index: 1; 
+  color: #fff; 
+  padding: 1rem; 
+  font-size: 1rem; 
 }
 
 .hover-box-content::before {
@@ -1583,19 +1583,34 @@ figure:hover .hover-box-content::before {
 /***** Milo *****/
 /*---------------*/
 figure.effect-milo {
-  background: #888888;
+  background-color: rgba(43, 41, 41, 0.8); 
   display: inline-block;
   overflow: hidden; 
 }
 
 figure.effect-milo img {
-  transform: none; /* Keep the original dimensions */
-  transition: transform 0.35s ease, opacity 0.35s ease; /* Smooth transitions */
+  transform: none; 
+  transition: transform 0.35s ease, opacity 0.35s ease; 
+}
+@media (max-width: 768px) { 
+  figure.effect-milo img {
+    width: 80%; 
+    margin: 0 auto;
+    margin-top: 25px; 
+  }
+}
+
+@media (max-width: 576px) { 
+  figure.effect-milo img {
+    width: 100%; 
+    margin: 0 auto;
+    margin-top: 25px; 
+  }
 }
 
 figure.effect-milo:hover img {
-  transform: scale(1.12); /* Smoothly zoom in on hover */
-  opacity: 1; /* Optional, keep opacity consistent if not needed */
+  transform: scale(1.12); 
+  opacity: 1; 
 }
 figure.effect-milo.hover2:hover img {
   opacity: 1;
@@ -2441,6 +2456,24 @@ section.features-carousel-section .owl-carousel .owl-nav button.owl-next {
 @media (max-width: 767px) {
   .features-section2 .images-box {
     padding-bottom: 1px;
+  }
+}
+
+@media (max-width: 768px) { 
+  .features-section .features-box .image-holder img {
+    width: 80%; 
+    margin: 0 auto; 
+    height: 210px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) { 
+  .features-section .features-box .image-holder img {
+    width: 100%; 
+    margin: 0 auto; 
+    height: 210px;
+    margin-top: 20px;
   }
 }
 .features-section2 .images-box:before, .features-section2 .images-box:after {
