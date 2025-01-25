@@ -301,34 +301,7 @@ $(document).ready(function($) {
 	/* ---------------------------------------------------------------------- */
 	/*	Contact Form
 	/* ---------------------------------------------------------------------- */
-	document.addEventListener('DOMContentLoaded', function () {
-		const contactForm = document.querySelector('#contact-form');
-	  
-		if (contactForm) {
-		  const scriptURL = 'https://script.google.com/macros/s/AKfycbyDv7zVk8UNt1dCgTax8-CW6j5pk7rtPp9a109DyTelkZGf-6oaj7HL3LQM3xzq3bRCQQ/exec';
-	  
-		  contactForm.addEventListener('submit', e => {
-			e.preventDefault();
-	  
-			console.log('Submitting form...'); // Log before sending
-	  
-			fetch(scriptURL, { method: 'POST', body: new FormData(contactForm) })
-			  .then(response => {
-				console.log('Form submitted successfully:', response); // Log the response
-				alert("Thank you! Your form has been submitted successfully.");
-				contactForm.reset();
-			  })
-			  .catch(error => {
-				console.error('Error!', error.message); // Log errors
-			  });
-		  });
-		}
-	  });
-	  
-	  
-	
-	
-	
+
 	/* ---------------------------------------------------------------------- */
 	/*	works carousel
 	/* ---------------------------------------------------------------------- */
