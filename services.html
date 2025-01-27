@@ -42,7 +42,7 @@
 	<div class="ip-header">
 
 		<p class="ip-logo">
-			<img src="images/logo.png" alt="">
+			<img src="images/loader_logo.png" alt="">
 		</p>
 
 		<div class="ip-loader">
@@ -53,7 +53,40 @@
 		</div>
 
 	</div>
-
+	<div class="pop-pup">
+		<div class="login-popup">
+			<div class="box">
+				<div class="img-area">
+					<div class="img"></div>
+				</div>
+				<div class="form">
+					<div class="close">&times;</div>
+					<h1>Plan Your Next Project with Us</h1>
+					<form>
+						<div class="form-group">
+							<input type="text" name="Name" placeholder="Name" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<input type="tel" name="Mobile Number" placeholder="Mobile Number" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<input type="email" name="Email" placeholder="Email" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<input type="text" name="Country" placeholder="Country" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<input type="text" name="Your Requirement" placeholder="Your Requirement" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<textarea name="Description" placeholder="Description" class="form-control" rows="4" required></textarea>
+						</div>
+						<button type="submit" class="btn">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>	
 	<!-- Container -->
 	<div id="container">
 
@@ -158,10 +191,10 @@
 								<img src="upload/service/intf.jpg" alt="portfolio1"/>
 								<figcaption class="hover-box">
 									<div class="hover-box-content">
-										<h4><a href="#">Interior.</a></h4>
+										<h4><a href="interior.html">Interior.</a></h4>
 										<p>Creative interiors blending comfort and elegance.</p>
 									</div>
-									<a href="#">
+									<a href="interior.html">
 										<span class="material-symbols-outlined">
 											open_in_new
 										</span>
@@ -175,10 +208,10 @@
 								<img src="upload/service/ext.jpg" alt="portfolio9"/>
 								<figcaption class="hover-box">
 									<div class="hover-box-content">
-										<h4><a href="#">Exterior.</a></h4>
+										<h4><a href="exterior.html">Exterior.</a></h4>
 										<p>Modern exterior design with an artistic touch.</p>
 									</div>
-									<a href="#">
+									<a href="exterior.html">
 										<span class="material-symbols-outlined">
 											open_in_new
 										</span>
@@ -203,15 +236,15 @@
 							</figure>
 						</div>
 					
-						<div class="portfolio-post metal with-large-size"  onclick="redirectToPage1()">
+						<div class="portfolio-post metal with-large-size"  onclick="redirectToPage2()">
 							<figure class="effect-milo" id="portmid">
 								<img src="upload/service/vtour.jpg" alt="portfolio1"/>
 								<figcaption class="hover-box">
 									<div class="hover-box-content">
-										<h4><a href="#">360° Virtual Tour.</a></h4>
+										<h4><a href="ARViews/app-files/index.html">360° Virtual Tour.</a></h4>
 										<p>Explore spaces with immersive 360° views.</p>
 									</div>
-									<a href="#">
+									<a href="ARViews/app-files/index.html">
 										<span class="material-symbols-outlined">
 											open_in_new
 										</span>
@@ -219,7 +252,7 @@
 								</figcaption>		
 							</figure>
 						</div>
-						<div class="portfolio-post houses with-large-size" onclick="redirectToPage2()">
+						<div class="portfolio-post houses with-large-size" onclick="redirectToPage4()">
 							<figure class="effect-milo" id="portmid">
 								<img src="upload/service/ameneti.jpg" alt="portfolio2" />
 								<figcaption class="hover-box">
@@ -268,7 +301,7 @@
 								</figcaption>
 							</figure>
 						</div>
-						<div class="portfolio-post exterior houses with-large-size" onclick="redirectToPage8()">
+						<div class="portfolio-post exterior houses with-large-size" onclick="redirectToPage9()">
 							<figure class="effect-milo">
 								<img src="upload/service/2dfloor.jpg" alt="portfolio6" />
 								<figcaption class="hover-box">
@@ -349,15 +382,15 @@
 </div>
 <script>
 	function redirectToPage1() {
-			window.location.href = "#";
+			window.location.href = "interior.html";
 		}
 	
 		function redirectToPage2() {
-			window.location.href = "#";
+			window.location.href = "ARViews/app-files/index.html";
 		}
 	
 		function redirectToPage3() {
-			window.location.href = "#";
+			window.location.href = "exterior.html";
 		}
 	
 		function redirectToPage4() {
@@ -379,9 +412,9 @@
 		}
 		function removeOnClickForMobile() {
   			const portfolioPosts = document.querySelectorAll('.portfolio-post');
-  			if (window.innerWidth <= 768) { // Mobile screen threshold
+  			if (window.innerWidth <= 768) { 
     		portfolioPosts.forEach((post) => {
-     		 post.onclick = null; // Remove onclick event
+     		 post.onclick = null; 
     			});
   			}
 		}
@@ -414,6 +447,7 @@ window.addEventListener('resize', removeOnClickForMobile);
     <script src="http://maps.google.com/maps/api/js?key=AIzaSyCiqrIen8rWQrvJsu-7f4rOta0fmI5r2SI&amp;sensor=false&amp;language=en"></script>
 	<script src="js/gmap3.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/popup.js"></script>
 
 </body>
 </html>
